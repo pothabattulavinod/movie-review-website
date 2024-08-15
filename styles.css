@@ -1,0 +1,247 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-panel {
+    padding: 20px;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #d3d3d3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.channel-name {
+    font-family: 'Lobster', ;
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #4b0082, #8a2be2);
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d3d3d3;
+    padding-bottom: 20px;
+}
+
+.movie-details img {
+    width: 300px;
+    height: 400px;
+    object-fit: contain;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    border: 3px solid #4b0082;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-info {
+    flex: 1;
+}
+
+.movie-info h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    margin: 0;
+    color: #4b0082;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.movie-info p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.rating {
+    font-size: 30px;
+    color: #ff8c00;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.rating span {
+    color: #333;
+    font-size: 24px;
+}
+
+.positives-negatives {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.positives, .negatives {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.positives {
+    background: #dff0d8;
+    border: 2px solid #3c763d;
+}
+
+.negatives {
+    background: #f2dede;
+    border: 2px solid #a94442;
+}
+
+.positives h3, .negatives h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+    text-align: center;
+}
+
+.positives h3 {
+    color: #3c763d;
+}
+
+.negatives h3 {
+    color: #a94442;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+li {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.positives li::before {
+    content: "👍 ";
+    color: #3c763d;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.negatives li::before {
+    content: "👎 ";
+    color: #a94442;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.review {
+    background: #e6e6fa;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 20px;
+}
+
+.review h3 {
+    font-size: 26px;
+    color: #4b0082;
+    margin-bottom: 15px;
+    text-align: center;
+    border-bottom: 2px solid #4b0082;
+    padding-bottom: 10px;
+}
+
+.review p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.review .summary {
+    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .movie-details {
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .movie-details img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .movie-info h2 {
+        font-size: 24px;
+    }
+
+    .movie-info p {
+        font-size: 16px;
+    }
+
+    .positives-negatives {
+        flex-direction: column;
+    }
+
+    .positives, .negatives {
+        flex: 1 1 100%;
+        margin-bottom: 15px;
+    }
+
+    .positives h3, .negatives h3 {
+        font-size: 22px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .channel-name {
+        font-size: 28px;
+    }
+
+    .rating {
+        font-size: 24px;
+    }
+
+    .rating span {
+        font-size: 20px;
+    }
+
+    .review h3 {
+        font-size: 22px;
+    }
+
+    .review p {
+        font-size: 16px;
+    }
+}
